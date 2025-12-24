@@ -1,0 +1,20 @@
+# ZotClip Dependencies
+# Python 3.8+
+
+# Configuration and file handling
+# - Built-in: json, os, pathlib, threading, time
+
+# Windows clipboard access
+pywin32>=306
+
+# System tray icon and menu
+pystray>=0.19.5
+
+# Global keyboard hook for Ctrl+C detection
+pynput>=1.7.6
+
+# Image processing for icon
+Pillow>=10.0.0
+
+# EXE packaging (development dependency)
+pyinstaller>=6.0.0
