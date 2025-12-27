@@ -15,10 +15,11 @@ class ClipboardFormatter:
     """Handles clipboard monitoring and Zotero citation reformatting."""
 
     # Pattern to match Zotero citation format:
-    # "content1" ([content2](content3)) ([content4](content5))
+    # "content1" ([content2](content3)) ([content4](content5))[content6]
     # More flexible pattern that handles various spacing and quoting
+    # content6 can be anything or nothing (optional trailing content)
     ZOTERO_PATTERN = re.compile(
-        r'^"?([^"\n]+?)"?\s*\(\[.*?\]\(.*?\)\)\s*\(\[.*?\]\((.+?)\)\)$',
+        r'^"?([^"\n]+?)"?\s*\(\[.*?\]\(.*?\)\)\s*\(\[.*?\]\((.+?)\)\).*?',
         re.DOTALL
     )
 
